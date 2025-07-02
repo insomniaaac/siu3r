@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bulma css template -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- model viewer -->
+    <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script> -->
+    <title>
+        SIU3R
+    </title>
+    <link rel="icon" href="siu3r.ico">
+</head>
+
+<body>
+    <section class="section">
+
+        <div class="container has-text-centered">
+            <div class="columns">
+                <img src="siu3r.ico" alt="SIU3R Logo" style="width: 48px; height: 48px;">
+                <!-- paper title -->
+                <p class="title is-3"> <b>SIU3R</b>: <b>SI</b>multaneous Scene <b>U</b>nderstanding and <b>3</b>D
+                    <b>R</b>econstruction
+                    <br>Beyond
+                    Feature
+                    Alignment
+                </p>
+            </div>
+
+            <!-- publication -->
+            <p class="subtitle is-4"> Arxiv 2025 </p>
+            <!-- authors -->
+            <p class="title is-5 mt-2">
+                <a href="https://me.kiui.moe/" target="_blank">Qi Xu</a><sup>1,2,*</sup>,
+                <a href="" target="_blank">Dongxu Wei</a><sup>2,3,*,&dagger;</sup>,
+                <a href="" target="_blank">Lingzhe Zhao</a><sup>2</sup>,
+                <a href="" target="_blank">Wenpu Li</a><sup>2</sup>,
+                <a href="" target="_blank">Zhangchi Huang</a><sup>2,4</sup>,
+                <a href="" target="_blank">Shunping Ji</a><sup>1,&dagger;</sup>,
+                <a href="" target="_blank">Peidong Liu</a><sup>2,&dagger;</sup>,
+            </p>
+            <!-- affiliations -->
+            <p class="subtitle is-5">
+                <sup>1</sup> Wuhan University &nbsp;
+                <sup>2</sup> Westlake University &nbsp;
+                <sup>3</sup> Westlake Institute for Advanced Study &nbsp;
+                <sup>4</sup> Zhejiang University &nbsp;
+            </p>
+
+            <!-- other links -->
+            <div class="is-flex is-justify-content-center">
+                <span class="icon-text mx-1">
+                    <a class="button is-dark" href="https://arxiv.org/abs/2309.16653" role="button" target="_blank">
+                        <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Arxiv </span>
+                    </a>
+                </span>
+                <span class="icon-text mx-1">
+                    <a class="button is-dark" href="https://github.com/WU-CVGL/SIU3R" role="button" target="_blank">
+                        <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span>
+                    </a>
+                </span>
+            </div>
+
+        </div>
+
+        <!-- main container -->
+        <div class="container is-max-desktop has-text-centered">
+
+            <figure class="image inline-block" style="margin-top: 50px; margin-bottom: 20px;">
+                <img src="images/teaser.png" style="width: 80%; margin:auto" />
+            </figure>
+
+            <!-- abstract -->
+            <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
+            <p class="content is-size-6 has-text-left">
+                Simultaneous understanding and 3D reconstruction plays an important role in developing end-to-end
+                embodied intelligent
+                systems.
+                To achieve this, recent approaches resort to 2D-to-3D feature alignment paradigm, which leads to limited
+                3D
+                understanding capability and potential semantic information loss.
+                In light of this, we propose <b>SIU3R</b>, the first alignment-free framework for generalizable
+                simultaneous understanding and
+                3D reconstruction from unposed images.
+                Specifically, SIU3R bridges reconstruction and understanding tasks via pixel-aligned 3D representation,
+                and unifies
+                multiple understanding tasks into a set of unified learnable queries, enabling native 3D understanding
+                without the need
+                of alignment with 2D models.
+                To encourage collaboration between the two tasks with shared representation, we further conduct in-depth
+                analyses of
+                their mutual benefits, and propose two lightweight modules to facilitate their interaction.
+                Extensive experiments demonstrate that our method achieves state-of-the-art performance not only on the
+                individual tasks
+                of 3D reconstruction and understanding, but also on the task of simultaneous understanding and 3D
+                reconstruction,
+                highlighting the advantages of our alignment-free framework and the effectiveness of the mutual benefit
+                designs.
+            </p>
+
+            <p class="title is-3 mt-5 has-text-centered">Method Overview</p>
+
+            <figure class="image inline-block" style="margin-top: 20px; margin-bottom: 20px;">
+                <img src="images/pipeline.png" style="width: 80%; margin:auto" />
+            </figure>
+
+            <p class="content has-text-centered is-size-5">
+                SIU3R reconstructs 3D scenes using only 2D unposed images and enables semantic understanding.
+            </p>
+
+
+            <p class="title is-3 mt-5 has-text-centered"> Visualization Results </p>
+
+            <!-- citation -->
+            <div class="card mt-4">
+                <header class="card-header">
+                    <p class="card-header-title"> Citation </p>
+                </header>
+                <div class="card-content is-size-5 has-text-left">
+                    <pre><code>@article{tang2023dreamgaussian,
+  title={DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation},
+  author={Tang, Jiaxiang and Ren, Jiawei and Zhou, Hang and Liu, Ziwei and Zeng, Gang},
+  journal={arXiv preprint arXiv:2309.16653},
+  year={2023}
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <div class="columns is-mobile is-centered">
+            <div class="column is-narrow">
+                <div class="is-flex is-align-items-center is-justify-content-center">
+                    <figure class="image is-128x128">
+                        <img class="is-rounded" src="images/siu.jpg" alt="SIU3R Logo">
+                    </figure>
+                </div>
+                <p>Please feel free to reach out to us for any inquiries.</p>
+                <p>
+                    <a href="https://github.com/WU-CVGL" target="_blank">
+                        <span class="icon">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </span>
+                        <span> WU-CVGL </span>
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:insomniaaac@qq.com" target="_blank">
+                        <span class="icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </span>
+                        <span>First Author Email</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
