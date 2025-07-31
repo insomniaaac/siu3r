@@ -150,6 +150,19 @@
                     height: 100%;
                     object-fit: cover;
                 }
+
+                .image-wrapper {
+                    aspect-ratio: 1 / 1;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+                }
+
+                .image-wrapper img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             </style>
 
             <p class="title is-3 mt-5 has-text-centered">Visualization Results</p>
@@ -272,7 +285,7 @@
 
 
 
-            <p class="title is-3 mt-5 has-text-centered">Real-world Captured Data Visualization Results</p>
+            <p class="title is-3 mt-5 has-text-centered">Zero-shot to Real-world Captured Data Visualization Results</p>
             <div class="columns is-variable is-5 is-multiline">
                 <div class="column">
                     <h2 class="subtitle has-text-centered">image1</h2>
@@ -344,45 +357,11 @@
                 </div>
             </div>
 
-            <p class="title is-3 mt-5 has-text-centered">Depth Visualization for Objects with Complex or Curved
-                Geometries</p>
-            <div class="columns is-variable is-5 is-multiline">
-                <div class="column">
-                    <div class="video-wrapper mb-5">
-                        <img src="depth_est/image1.jpg" alt="Image 1"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
-                </div>
 
-                <div class="column">
-                    <div class="video-wrapper mb-5">
-                        <img src="depth_est/depth1.jpg" alt="Depth 1"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="video-wrapper mb-5">
-                        <img src="depth_est/image2.jpg" alt="Image 2"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="video-wrapper mb-5">
-                        <img src="depth_est/depth2.jpg" alt="Depth 2"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
-                </div>
-            </div>
-
-
-            <p class="title is-3 mt-5 has-text-centered">Extend to Multi-View Input Visualization Results</p>
+            <p class="title is-3 mt-5 has-text-centered">Extend to 4 Input Views Visualization Results</p>
             <div class="columns is-variable is-5 is-multiline">
                 <div class="column">
                     <h2 class="subtitle has-text-centered">image1</h2>
-                    <div class="video-wrapper mb-5">
-                        <img src="toilet4view_result/toilet4view_image1.png" alt="Image 1"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
                     <div class="video-wrapper mb-5">
                         <img src="toilet4view_result/toilet4view_image1.png" alt="Image 1"
                             style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
@@ -395,17 +374,9 @@
                         <img src="toilet4view_result/toilet4view_image2.png" alt="Image 2"
                             style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
                     </div>
-                    <div class="video-wrapper mb-5">
-                        <img src="toilet4view_result/toilet4view_image2.png" alt="Image 2"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
                 </div>
                 <div class="column">
                     <h2 class="subtitle has-text-centered">image3</h2>
-                    <div class="video-wrapper mb-5">
-                        <img src="toilet4view_result/toilet4view_image3.png" alt="Image 3"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
                     <div class="video-wrapper mb-5">
                         <img src="toilet4view_result/toilet4view_image3.png" alt="Image 3"
                             style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
@@ -417,20 +388,11 @@
                         <img src="toilet4view_result/toilet4view_image4.png" alt="Image 4"
                             style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
                     </div>
-                    <div class="video-wrapper mb-5">
-                        <img src="toilet4view_result/toilet4view_image4.png" alt="Image 4"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
-                    </div>
                 </div>
 
                 <!-- 第 1 列 -->
                 <div class="column">
                     <h2 class="subtitle has-text-centered">rgb</h2>
-                    <div class="video-wrapper mb-5">
-                        <video controls autoplay muted loop playsinline>
-                            <source src="toilet4view_result/videos/rgb.mp4" type="video/mp4">
-                        </video>
-                    </div>
                     <div class="video-wrapper mb-5">
                         <video controls autoplay muted loop playsinline>
                             <source src="toilet4view_result/videos/rgb.mp4" type="video/mp4">
@@ -446,11 +408,6 @@
                             <source src="toilet4view_result/videos/sem.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="video-wrapper mb-5">
-                        <video controls autoplay muted loop playsinline>
-                            <source src="toilet4view_result/videos/sem.mp4" type="video/mp4">
-                        </video>
-                    </div>
                 </div>
 
                 <!-- 第 3 列 -->
@@ -461,9 +418,98 @@
                             <source src="toilet4view_result/videos/ins.mp4" type="video/mp4">
                         </video>
                     </div>
+                </div>
+            </div>
+
+
+            <p class="title is-3 mt-5 has-text-centered">Extend to 8 Input Views Visualization Results</p>
+            <div class="columns is-variable is-5 is-multiline">
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image1</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image1.jpg" alt="Image 1"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image2</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image2.jpg" alt="Image 2"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image3</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image3.jpg" alt="Image 3"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image4</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image4.jpg" alt="Image 4"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image5</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image5.jpg" alt="Image 4"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image6</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image6.jpg" alt="Image 4"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-variable is-5 is-multiline">
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image7</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image7.jpg" alt="Image 4"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image8</h2>
+                    <div class="video-wrapper mb-5">
+                        <img src="largeroom_results/largeroom_image8.jpg" alt="Image 4"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+                <!-- 第 1 列 -->
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">rgb</h2>
                     <div class="video-wrapper mb-5">
                         <video controls autoplay muted loop playsinline>
-                            <source src="toilet4view_result/videos/ins.mp4" type="video/mp4">
+                            <source src="largeroom_results/videos/rgb.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- 第 2 列 -->
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">sem</h2>
+                    <div class="video-wrapper mb-5">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="largeroom_results/videos/sem.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- 第 3 列 -->
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">ins</h2>
+                    <div class="video-wrapper mb-5">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="largeroom_results/videos/ins.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -538,6 +584,101 @@
                         <video controls autoplay muted loop playsinline>
                             <source src="zeroshot_replica_results/videos/ins.mp4" type="video/mp4">
                         </video>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .comic-heading {
+                    font-family: "Comic Sans MS", "Comic Neue", cursive;
+                    font-size: 1.25rem;
+                    /* 比 Bulma 默认 h2 的 1.5rem 再小一点 */
+                    font-weight: 600;
+                    /* 比默认 700 细一点 */
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+            </style>
+            <p class="title is-3 mt-5 has-text-centered">Text-referred Segmentation Visualization Results</p>
+            <div class="columns is-variable is-5 is-multiline">
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image</h2>
+                    <div class="image-wrapper mb-5">
+                        <img src="textrefer/textrefer1.jpg" alt="Image 1"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h2 class="subtitle has-text-centered comic-heading">refrigerator right of another</h2>
+                    <div class="image-wrapper mb-5">
+                        <img src="textrefer/textrefer1_res1.png" alt="Image 2"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h2 class="subtitle has-text-centered comic-heading">refrigerators</h2>
+                    <div class="image-wrapper mb-5">
+                        <img src="textrefer/textrefer1_res_all.png" alt="Image 3"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+            </div>
+            <div class="columns is-variable is-5 is-multiline">
+                <div class="column">
+                    <h2 class="subtitle has-text-centered">image</h2>
+                    <div class="image-wrapper mb-5">
+                        <img src="textrefer/textrefer2.jpg" alt="Image 1"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h2 class="subtitle has-text-centered comic-heading">the chair on the right</h2>
+                    <div class="image-wrapper mb-5">
+                        <img src="textrefer/textrefer2_res1.png" alt="Image 2"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h2 class="subtitle has-text-centered comic-heading">chairs</h2>
+                    <div class="image-wrapper mb-5">
+                        <img src="textrefer/textrefer2_res_all.png" alt="Image 3"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="title is-3 mt-5 has-text-centered">Depth Visualization for Objects with Complex or Curved
+                Geometries</p>
+            <div class="columns is-variable is-5 is-multiline">
+                <div class="column">
+                    <div class="image-wrapper mb-5">
+                        <img src="depth_est/image1.jpg" alt="Image 1"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="image-wrapper mb-5">
+                        <img src="depth_est/depth1.jpg" alt="Depth 1"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-wrapper mb-5">
+                        <img src="depth_est/image2.jpg" alt="Image 2"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-wrapper mb-5">
+                        <img src="depth_est/depth2.jpg" alt="Depth 2"
+                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, .08);">
                     </div>
                 </div>
             </div>
